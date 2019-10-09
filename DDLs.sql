@@ -4,7 +4,7 @@ CREATE DATABASE boletim;
 /* Excluir banco */
 DROP DATABASE boletim;
 
-/* Usar o banco */
+/* Usar o banco DQL */
 USE boletim;
 
 /*Criar TABELA ALUNO*/
@@ -33,3 +33,9 @@ CREATE TABLE trabalho (
 	IdAluno   INT FOREIGN KEY REFERENCES aluno  (IdAluno)
 
 );
+
+/* Incluir nova coluna */
+ALTER TABLE materia	ADD Teste VARCHAR(2);
+
+/* Excluir colunas */
+ALTER TABLE materia DROP COLUMN Teste;
